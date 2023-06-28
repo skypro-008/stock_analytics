@@ -1,0 +1,32 @@
+[tool.poetry]
+name = "currency-analytics"
+version = "0.1.0"
+description = ""
+authors = ["kirillskyeng <kirill.netreba@skyeng.ru>"]
+readme = "README.md"
+packages = [{include = "currency_analytics"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+requests = "^2.31.0"
+python-dotenv = "^1.0.0"
+
+[tool.poetry.group.lint.dependencies]
+mypy = "^1.4.1"
+black = "^23.3.0"
+isort = "^5.12.0"
+flake8 = "^6.0.0"
+
+[tool.black]
+line-length = 88
+
+[tool.isort]
+profile = "black"
+
+[mypy]
+ignore_missing_imports = true
+strict_optional = true
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
