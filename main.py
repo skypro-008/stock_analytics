@@ -1,7 +1,7 @@
 import sys
 from datetime import datetime
 
-from analytics import analyze_stock_data
+from src.analytics import analyze_stock_data
 
 if __name__ == "__main__":
     start_date_str = sys.argv[1]
